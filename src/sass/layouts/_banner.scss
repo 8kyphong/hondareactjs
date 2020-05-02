@@ -1,0 +1,194 @@
+.banner {
+  background-color: #00324f;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+.banner-carousel {
+  list-style-type: none;
+  .slick-track {
+    overflow: hidden;
+  }
+  .item {
+    position: relative;
+    h3 {
+      font-size: 35px;
+    }
+    div {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+  .banner1 {
+    height: 500px;
+    background-image: url(/images/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .banner2 {
+    height: 500px;
+    background-image: url(/images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #036194;
+    text-shadow: 1px 1px 1px gray;
+    p {
+      font-size: 10px;
+      margin: 20px 0;
+    }
+  }
+  .banner3 {
+    height: 500px;
+    background-image: url(/images/banner3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px gray;
+    p {
+      margin: 20px 0;
+    }
+  }
+  .banner4 {
+    height: 500px;
+    background-image: url(/images/banner4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px gray;
+
+    p {
+      font-size: 15px;
+      margin: 0px;
+    }
+    p:last-child {
+      font-size: 10px;
+      margin: 20px 0;
+    }
+  }
+  .banner5 {
+    height: 500px;
+    background-image: url(/images/banner5.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .slick-next {
+    position: absolute;
+    font-size: 0px;
+    height: 70px;
+    width: 50px;
+    background-color: transparent;
+    color: blue;
+    top: 45%;
+    right: 0px;
+    z-index: 10;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    &::after {
+      content: ">";
+      font-size: 50px;
+      color: rgb(128, 126, 126);
+    }
+  }
+  .slick-prev {
+    position: absolute;
+    font-size: 0px;
+    height: 70px;
+    width: 50px;
+    background-color: transparent;
+    color: blue;
+    top: 45%;
+    left: 0px;
+    z-index: 10;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &::after {
+      content: "<";
+      font-size: 50px;
+      color: rgb(128, 126, 126);
+    }
+  }
+  .slick-dots {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .slick-active {
+      background-color: #007cbf;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      margin-right: 10px;
+      button {
+        opacity: 0;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    li {
+      margin-right: 10px;
+      button {
+        transform: translateY(-13px);
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        background-color: #305970;
+        border: none;
+        border-radius: 50%;
+        left: 50%;
+      }
+    }
+  }
+  @include mediaQuery("medium") {
+    width: 100%;
+    height: 400px;
+    .banner1,
+    .banner2,
+    .banner3,
+    .banner4,
+    .banner5 {
+      background-size: 100%;
+      transform: translateY(-15px);
+      height: 300px;
+      p {
+        display: none;
+      }
+    }
+    .banner3 {
+      background-size: 150%;
+      height: 300px;
+    }
+    .slick-next,
+    .slick-prev {
+      top: 25%;
+    }
+    .slick-dots {
+      transform: translateY(-15px);
+    }
+  }
+  @include mediaQuery("small") {
+    height: 300px;
+    .banner1,
+    .banner2,
+    .banner4,
+    .banner5 {
+      background-size: 130%;
+    }
+    .banner3 {
+      background-size: 180%;
+    }
+  }
+}

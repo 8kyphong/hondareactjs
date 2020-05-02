@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 50px;
+  padding: 20px 0;
+  background-color: #ffffff;
+  align-items: center;
+  margin: 30px 0;
+  i {
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  input {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    &::placeholder {
+      font-size: 20px;
+    }
+  }
+  .search-button {
+    border-right: 1px solid gray;
+    margin: 0 50px;
+    padding-right: 50px;
+  }
+  .to--top {
+    font-size: 20px;
+    color: black;
+  }
+}

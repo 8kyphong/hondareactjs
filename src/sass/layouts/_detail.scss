@@ -1,0 +1,32 @@
+.more-detail {
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+.detail {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 90%;
+  margin: auto;
+  .items {
+    h3 {
+      @include text($color-blue-2, 15px, bold);
+    }
+    a {
+      display: block;
+      margin: 20px 0;
+      @include text($color-blue-2, 15px, normal);
+    }
+  }
+  @include mediaQuery("large") {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    .items {
+      border-top: 2px solid grey;
+      padding-top: 10px;
+    }
+  }
+  @include mediaQuery("small") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

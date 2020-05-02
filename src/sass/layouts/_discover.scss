@@ -1,0 +1,123 @@
+.discover {
+  background-color: #f5f5f5;
+  h2 {
+    text-align: center;
+    @include text($color-blue-2, 70px, 100);
+  }
+  p:nth-child(2) {
+    text-align: center;
+    @include text($color-blue-2, 15px, normal);
+  }
+  .discover-container {
+    list-style-type: none;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    li {
+      width: 100%;
+    }
+    .cover1 {
+      width: 97%;
+      background-image: url(/images/dis1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
+      box-shadow: -3px 18px 12px 1px rgba(128, 128, 128, 0.253);
+    }
+    .cover2 {
+      width: 97%;
+      background-image: url(/images/dis2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
+      box-shadow: -3px 18px 12px 1px rgba(128, 128, 128, 0.253);
+    }
+    .cover3 {
+      width: 97%;
+      background-image: url(/images/dis3.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
+      box-shadow: -3px 18px 12px 1px rgba(128, 128, 128, 0.253);
+    }
+    .cover4 {
+      width: 97%;
+      background-image: url(/images/dis4.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
+      box-shadow: -3px 18px 12px 1px rgba(128, 128, 128, 0.253);
+    }
+    .cover5 {
+      width: 97%;
+      background-image: url(/images/dis5.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 450px;
+      position: relative;
+      box-shadow: -3px 18px 12px 1px rgba(128, 128, 128, 0.253);
+    }
+    .text {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      h3 {
+        @include text($color-blue-2, 15px, 700);
+      }
+      p {
+        @include text($color-blue, 13px, normal);
+        width: 90%;
+      }
+      a {
+        @include text($color-blue-4, 15px, 700);
+      }
+    }
+    .video {
+      margin-right: 10px;
+    }
+    .cover6 {
+      .main-logo {
+        color: #017dc0;
+        font-size: 30px;
+      }
+      .text-cover6 {
+        margin: 200px 0;
+      }
+    }
+    @include mediaQuery("large") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        margin-top: 50px;
+      }
+    }
+    @include mediaQuery("medium") {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      .video {
+        .autoPlayVideo {
+          width: 80%;
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+  .more {
+    width: 15%;
+    margin: auto;
+    button {
+      width: 200px;
+      margin-top: -150px;
+    }
+  }
+}

@@ -1,0 +1,294 @@
+.h2-vehicles {
+  text-align: center;
+  @include text($color-blue-2, 70px, 100);
+}
+.tab {
+  .tab-vehicles {
+    text-align: center;
+    border: none;
+    width: 55%;
+    margin: auto;
+    a {
+      border: none;
+      font-weight: bold;
+      color: $color-blue-2;
+    }
+    .active {
+      color: $color-blue-4;
+      border-bottom: 5px solid $color-blue-4;
+    }
+  }
+}
+.pic1 {
+  background-image: url(/images/car1.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.pic2 {
+  background-image: url(/images/car2.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.pic3 {
+  background-image: url(/images/car3.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.suv1 {
+  background-image: url(/images/suv1.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.suv2 {
+  background-image: url(/images/suv2.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.suv3 {
+  background-image: url(/images/suv3.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.mini1 {
+  background-image: url(/images/mini1.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+.mini2 {
+  background-image: url(/images/mini2.jpg);
+  background-size: cover;
+  height: 550px;
+  color: white;
+}
+
+.pic1,
+.pic2,
+.pic3,
+.suv1,
+.suv2,
+.suv3,
+.mini1,
+.mini2 {
+  .page {
+    padding: 50px;
+    font-weight: bold;
+  }
+  .item--1 {
+    margin-left: 100px;
+    .title {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-40%);
+      span {
+        display: flex;
+        align-items: center;
+        height: 15px;
+      }
+      hr {
+        width: 100px;
+        height: 1.5px;
+        border-color: white;
+        display: inline-block;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      p {
+        display: inline;
+        padding: 0 5px;
+        font-style: italic;
+      }
+      h3 {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 5px;
+        padding-bottom: 2px;
+      }
+    }
+    .intro {
+      width: 25%;
+      font-size: 13px;
+    }
+    .price {
+      width: 30%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      .left,
+      .right {
+        // width: 40%;
+        .number {
+          font-size: 40px;
+          font-weight: 100;
+          letter-spacing: 2px;
+          margin: 0;
+        }
+        .text {
+          font-size: 13px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .button {
+      button {
+        margin: 0 15px;
+      }
+    }
+  }
+  .line {
+    width: 50%;
+    height: 1px;
+    background-color: gray;
+    margin-top: 30px;
+  }
+  .item--2 {
+    width: 45%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a:link {
+      text-decoration: none;
+    }
+    a {
+      color: white;
+    }
+  }
+}
+.vehicles {
+  .hero-carousel {
+    .slick-next {
+      position: absolute;
+      font-size: 0px;
+      height: 70px;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.582);
+      color: blue;
+      top: 45%;
+      right: 0px;
+      z-index: 10;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      &::after {
+        content: ">";
+        font-size: 50px;
+        color: rgb(48, 48, 48);
+      }
+    }
+    .slick-prev {
+      position: absolute;
+      font-size: 0px;
+      height: 70px;
+      width: 50px;
+      background-color: rgba(255, 255, 255, 0.582);
+      color: blue;
+      top: 45%;
+      left: 0px;
+      z-index: 10;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      &::after {
+        content: "<";
+        font-size: 50px;
+        color: rgb(48, 48, 48);
+      }
+    }
+  }
+}
+
+@include mediaQuery("large") {
+  .vehicles {
+    transform: translateY(150px);
+    .h2-vehicles {
+      font-size: 60px;
+    }
+    .tab-vehicles {
+      display: grid;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      .pic1,
+      .pic2,
+      .pic3,
+      .suv1,
+      .suv2,
+      .suv3,
+      .mini1,
+      .mini2 {
+        width: 80%;
+        height: 350px;
+      }
+    }
+    .hero-carousel {
+      p {
+        display: none;
+      }
+    }
+    .title {
+      margin-top: 50px;
+    }
+  }
+}
+@include mediaQuery("small") {
+  .tab-content {
+    .tab-pane {
+      .pic1,
+      .pic2,
+      .pic3,
+      .suv1,
+      .suv2,
+      .suv3,
+      .mini1,
+      .mini2 {
+        width: 100%;
+        height: 500px;
+        background-size: 120%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .vehicles {
+    .tab-content {
+      .hero-carousel {
+        .slick-prev,
+        .slick-next {
+          top: 25%;
+        }
+        hr.line {
+          margin-top: 50px;
+        }
+        .title {
+          transform: translate(-150px, 40px);
+        }
+        h3 {
+          font-size: 40px;
+        }
+        p {
+          display: none;
+        }
+        .button {
+          margin: 0;
+          transform: translate(-50px, 40px);
+        }
+        .item--2 {
+          a {
+            display: none;
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}

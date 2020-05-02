@@ -1,0 +1,70 @@
+.guild-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .left {
+    background-image: url(/images/guild.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 95%;
+    height: 400px;
+    margin-left: 30px;
+    position: relative;
+    .text {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+
+      text-align: center;
+      transform: translateX(-50%);
+      width: 100%;
+      margin-top: 35px;
+
+      button {
+        margin: 5px 0;
+      }
+    }
+  }
+  .right {
+    background-image: url(/images/guild2.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 95%;
+    height: 400px;
+    margin-left: 30px;
+    position: relative;
+    .text {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+
+      text-align: center;
+      transform: translateX(-50%);
+      width: 100%;
+      margin-top: 35px;
+      h3 {
+        @include text($color-white-0, $fs-2, $fw-bold-1);
+        margin-bottom: 0;
+      }
+      p {
+        width: 80%;
+        @include text($color-white-0, $fs-1, $fw-normal);
+
+        margin: 5px auto;
+      }
+    }
+  }
+  @include mediaQuery("large") {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    .right {
+      margin-top: 20px;
+      .text {
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

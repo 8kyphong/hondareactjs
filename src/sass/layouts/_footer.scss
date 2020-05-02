@@ -1,0 +1,34 @@
+.footer {
+  background-color: #007cc0;
+  .item-1 {
+    color: white;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    .left {
+      width: 50%;
+      p {
+        margin: 0;
+      }
+      a {
+        color: white;
+      }
+    }
+    .right {
+      margin-left: 20px;
+      .link {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        a {
+          margin-left: 10px;
+          color: white;
+        }
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}

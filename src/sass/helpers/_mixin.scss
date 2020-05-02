@@ -1,0 +1,26 @@
+@mixin text($color, $fs, $fw) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+}
+@mixin button($bg-color, $border-color, $border-radius, $padding-top-bottom, $padding-left-right) {
+  background-color: $bg-color;
+  border: 3px solid $border-color;
+  border-radius: $border-radius;
+  padding: $padding-top-bottom $padding-left-right;
+}
+
+// screen = extra-large, large, medium, small
+@mixin mediaQuery($screen) {
+  @if map-has-key($map: $breakpoints, $key: $screen) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "`#{$screen}`khong ton tai";
+  }
+}
